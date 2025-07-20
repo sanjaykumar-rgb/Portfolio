@@ -26,14 +26,12 @@ import {
 
 interface ProjectsSectionProps {
   projectsData: any
-  sectionVariants: any
   containerVariants: any
   itemVariants: any
 }
 
 export function ProjectsSection({
   projectsData,
-  sectionVariants,
   containerVariants,
   itemVariants,
 }: ProjectsSectionProps) {
@@ -45,9 +43,9 @@ export function ProjectsSection({
   const projects = Array.isArray(projectsData) ? projectsData : projectsData?.projects || []
 
   // Create categories from project data or use defaults
-  const projectCategories =
+  const projectCategories: string[] =
     projects.length > 0
-      ? Array.from(new Set(projects.map((project: any) => project.category).filter(Boolean)))
+      ? Array.from(new Set(projects.map((project: any) => project.category).filter(Boolean))) as string[]
       : ["Web Design", "Mobile App", "Branding", "UI/UX"]
 
   const categories: string[] = ["All", ...projectCategories]
@@ -83,8 +81,7 @@ export function ProjectsSection({
     },
   ]
 
-  const filteredProjects =
-    activeFilter === "All" ? projects : projects.filter((project: any) => project.category === activeFilter)
+
 
   const scrollLeft = () => {
     if (projectsScrollRef.current) {

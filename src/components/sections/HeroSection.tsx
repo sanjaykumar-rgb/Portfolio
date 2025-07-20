@@ -277,28 +277,28 @@ export function HeroSection({ personalInfo, stats, containerVariants, itemVarian
                 className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start"
               >
                 <motion.div variants={itemVariants}>
-                  <Button
-                    size="lg"
-                    variant="gradient"
-                    className="group text-sm sm:text-base lg:text-lg px-4 sm:px-6 lg:px-8 py-3 sm:py-4 w-full sm:w-auto"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <Download className="w-4 h-4 sm:w-5 sm:h-5 mr-2 group-hover:animate-bounce" />
-                    Download Resume
-                  </Button>
+                                    <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                    <Button
+                      size="lg"
+                      variant="gradient"
+                      className="group text-sm sm:text-base lg:text-lg px-4 sm:px-6 lg:px-8 py-3 sm:py-4 w-full sm:w-auto"
+                    >
+                      <Download className="w-4 h-4 sm:w-5 sm:h-5 mr-2 group-hover:animate-bounce" />
+                      Download Resume
+                    </Button>
+                  </motion.div>
                 </motion.div>
                 <motion.div variants={itemVariants}>
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="border-white/30 text-white hover:bg-white hover:text-slate-900 glass bg-transparent text-sm sm:text-base lg:text-lg px-4 sm:px-6 lg:px-8 py-3 sm:py-4 w-full sm:w-auto"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <Eye className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
-                    View Portfolio
-                  </Button>
+                                    <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="border-white/30 text-white hover:bg-white hover:text-slate-900 glass bg-transparent text-sm sm:text-base lg:text-lg px-4 sm:px-6 lg:px-8 py-3 sm:py-4 w-full sm:w-auto"
+                    >
+                      <Eye className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
+                      View Portfolio
+                    </Button>
+                  </motion.div>
                 </motion.div>
               </motion.div>
 
@@ -309,15 +309,15 @@ export function HeroSection({ personalInfo, stats, containerVariants, itemVarian
               >
                 {socialLinks.map(({ icon: Icon, color, label, followers }, index) => (
                   <motion.div variants={itemVariants} key={index} className="group relative">
-                    <Button
-                      size="icon"
-                      variant="ghost"
-                      className={`glass text-white ${color} hover:scale-110 transition-all duration-300 rounded-xl w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12`}
-                      whileHover={{ y: -2 }}
-                      whileTap={{ scale: 0.9 }}
-                    >
-                      <Icon className="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5" />
-                    </Button>
+                    <motion.div whileHover={{ y: -2 }} whileTap={{ scale: 0.9 }}>
+                      <Button
+                        size="icon"
+                        variant="ghost"
+                        className={`glass text-white ${color} hover:scale-110 transition-all duration-300 rounded-xl w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12`}
+                      >
+                        <Icon className="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5" />
+                      </Button>
+                    </motion.div>
 
                     {/* Enhanced Tooltip - Hidden on mobile */}
                     <div className="hidden sm:block absolute -bottom-16 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">

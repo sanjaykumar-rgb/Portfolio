@@ -19,14 +19,12 @@ import {
 
 interface EducationSectionProps {
   educationData: any[]
-  sectionVariants: any
   containerVariants: any
   itemVariants: any
 }
 
 export function EducationSection({
   educationData,
-  sectionVariants,
   containerVariants,
   itemVariants,
 }: EducationSectionProps) {

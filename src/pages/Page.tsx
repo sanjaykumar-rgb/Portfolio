@@ -480,57 +480,47 @@ export default function Portfolio() {
 
       <AboutSection
         aboutData={portfolioData.about}
-        sectionVariants={sectionVariants}
         containerVariants={containerVariants}
         itemVariants={itemVariants}
       />
 
       <SkillsSection
         skillsData={portfolioData.skills}
-        sectionVariants={sectionVariants}
         containerVariants={containerVariants}
         itemVariants={itemVariants}
       />
 
       <ProjectsSection
         projectsData={portfolioData.projects}
-        sectionVariants={sectionVariants}
         containerVariants={containerVariants}
         itemVariants={itemVariants}
       />
 
       <ExperienceSection
         experienceData={portfolioData.experience}
-        sectionVariants={sectionVariants}
         containerVariants={containerVariants}
         itemVariants={itemVariants}
       />
 
       <EducationSection
         educationData={portfolioData.education}
-        sectionVariants={sectionVariants}
         containerVariants={containerVariants}
         itemVariants={itemVariants}
       />
 
       <ContactSection
-        contactData={portfolioData.contact}
-        personalInfo={portfolioData.personal}
         sectionVariants={sectionVariants}
         containerVariants={containerVariants}
         itemVariants={itemVariants}
       />
 
       <CTASection
-        personalInfo={portfolioData.personal}
         sectionVariants={sectionVariants}
         containerVariants={containerVariants}
         itemVariants={itemVariants}
       />
 
       <Footer
-        personalInfo={portfolioData.personal}
-        contactData={portfolioData.contact}
         sectionVariants={sectionVariants}
         containerVariants={containerVariants}
         itemVariants={itemVariants}

@@ -14,7 +14,6 @@ import {
   Monitor,
   Target,
   Zap,
-  Users,
   Heart,
   TrendingUp,
   CheckCircle,
@@ -25,13 +24,12 @@ import { useRef, useState, useEffect } from "react"
 
 interface AboutSectionProps {
   aboutData: any
-  sectionVariants: any
   containerVariants: any
   itemVariants: any
 }
 
-export function AboutSection({ aboutData, sectionVariants, containerVariants, itemVariants }: AboutSectionProps) {
-  const sectionRef = useRef(null)
+export function AboutSection({ aboutData, containerVariants, itemVariants }: AboutSectionProps) {
+  const sectionRef = useRef<HTMLElement>(null)
   const isInView = useInView(sectionRef, { once: true, amount: 0.3 })
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -49,7 +47,7 @@ export function AboutSection({ aboutData, sectionVariants, containerVariants, it
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       if (sectionRef.current) {
-        const rect = (sectionRef.current as HTMLElement).getBoundingClientRect()
+        const rect = sectionRef.current.getBoundingClientRect()
         setMousePosition({
           x: ((e.clientX - rect.left) / rect.width) * 2 - 1,
           y: ((e.clientY - rect.top) / rect.height) * 2 - 1,
@@ -65,12 +63,6 @@ export function AboutSection({ aboutData, sectionVariants, containerVariants, it
   }, [])
 
   // Provide default values to prevent undefined errors
-  const personalityTraits = aboutData?.personalityTraits || [
-    { icon: Target, label: "Strategic Thinker", description: "Every design decision backed by research and strategy" },
-    { icon: Zap, label: "Fast Executor", description: "Quick turnaround without compromising quality" },
-    { icon: Users, label: "Team Collaborator", description: "Thrives in collaborative environments" },
-    { icon: Star, label: "Quality Focused", description: "Meticulous attention to every detail" },
-  ]
 
   const keyAchievements = aboutData?.keyAchievements || [
     "Increased client engagement by 45% through innovative design solutions",
@@ -507,7 +499,7 @@ export function AboutSection({ aboutData, sectionVariants, containerVariants, it
 
                   <div className="flex-1 overflow-y-auto scrollbar-thin scrollbar-thumb-green-300 scrollbar-track-gray-100">
                     <div className="space-y-3 pr-2">
-                      {keyAchievements.map((achievement, index) => (
+                      {keyAchievements.map((achievement: string, index: number) => (
                         <motion.div
                           key={index}
                           className="flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group"

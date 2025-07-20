@@ -21,14 +21,12 @@ import {
 
 interface ExperienceSectionProps {
   experienceData: any[]
-  sectionVariants: any
   containerVariants: any
   itemVariants: any
 }
 
 export function ExperienceSection({
   experienceData,
-  sectionVariants,
   containerVariants,
   itemVariants,
 }: ExperienceSectionProps) {
@@ -212,7 +210,7 @@ export function ExperienceSection({
                     <div
                       className={`w-full md:w-5/12 ml-20 md:ml-0 ${index % 2 === 0 ? "md:mr-auto md:pr-8" : "md:ml-auto md:pl-8"}`}
                     >
-                      <EnhancedExperienceCard exp={exp} index={index} />
+                      <EnhancedExperienceCard exp={exp} />
                     </div>
                   </motion.div>
                 ))}
@@ -411,7 +409,7 @@ export function ExperienceSection({
 }
 
 // Enhanced Experience Card Component
-function EnhancedExperienceCard({ exp, index }: { exp: any; index: number }) {
+function EnhancedExperienceCard({ exp }: { exp: any }) {
   return (
     <motion.div
       whileHover={{ y: -8, scale: 1.02 }}

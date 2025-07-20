@@ -25,12 +25,11 @@ import { useRef } from "react"
 
 interface SkillsSectionProps {
   skillsData: any
-  sectionVariants: any
   containerVariants: any
   itemVariants: any
 }
 
-export function SkillsSection({ skillsData, sectionVariants, containerVariants, itemVariants }: SkillsSectionProps) {
+export function SkillsSection({ skillsData, containerVariants, itemVariants }: SkillsSectionProps) {
   const [activeSkillTab, setActiveSkillTab] = React.useState(skillsData?.categories?.[0]?.category || "Design")
   const skillsScrollRef = useRef<HTMLDivElement>(null)
   const certificationsScrollRef = useRef<HTMLDivElement>(null)
@@ -198,7 +197,7 @@ export function SkillsSection({ skillsData, sectionVariants, containerVariants, 
             <Tabs value={activeSkillTab} onValueChange={setActiveSkillTab} className="w-full">
               <div className="overflow-x-auto pb-4 mb-8">
                 <TabsList className="grid w-full grid-cols-1 md:grid-cols-3 h-auto p-2 bg-white/80 backdrop-blur-sm shadow-2xl rounded-3xl border-0 min-w-[800px] md:min-w-0 gap-3">
-                  {skillCategories.map((group, index) => {
+                  {skillCategories.map((group: any, index: number) => {
                     const Icon = group.icon
                     return (
                       <motion.div
@@ -247,7 +246,7 @@ export function SkillsSection({ skillsData, sectionVariants, containerVariants, 
                 </TabsList>
               </div>
 
-              {skillCategories.map((group) => (
+              {skillCategories.map((group: any) => (
                 <TabsContent key={group.category} value={group.category}>
                   <motion.div
                     initial={{ opacity: 0, y: 30 }}
@@ -359,7 +358,7 @@ export function SkillsSection({ skillsData, sectionVariants, containerVariants, 
                   ref={certificationsScrollRef}
                   className="flex gap-6 overflow-x-auto scrollbar-thin scrollbar-thumb-yellow-300 scrollbar-track-gray-100 pb-4"
                 >
-                  {certifications.map((cert, index) => (
+                  {certifications.map((cert: any, index: number) => (
                     <motion.div
                       key={index}
                       className="flex-shrink-0 w-80 p-6 rounded-2xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 group border border-gray-100 hover:border-yellow-200"
@@ -436,7 +435,7 @@ export function SkillsSection({ skillsData, sectionVariants, containerVariants, 
                   ref={workflowScrollRef}
                   className="flex gap-6 overflow-x-auto scrollbar-thin scrollbar-thumb-blue-300 scrollbar-track-gray-100 pb-4"
                 >
-                  {workflowSteps.map((step, index) => (
+                  {workflowSteps.map((step: any, index: number) => (
                     <motion.div
                       key={index}
                       className="flex-shrink-0 w-72 p-6 rounded-2xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 group border border-gray-100 hover:border-blue-200"
