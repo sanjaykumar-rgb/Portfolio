@@ -194,7 +194,7 @@ export default function Portfolio() {
         category: "UI/UX Design",
         description:
           "Modern mobile app interface design for fashion e-commerce platform with intuitive user experience and seamless shopping flow.",
-        image: "/placeholder.svg?height=300&width=400&text=Mobile+App+UI",
+        image: "/vite.svg",
         tags: ["Figma", "UI/UX", "Mobile", "E-commerce"],
         stats: { views: "2.3k", likes: "156", comments: "23" },
         color: "from-pink-500 to-rose-500",
@@ -208,7 +208,7 @@ export default function Portfolio() {
         category: "Branding",
         description:
           "Complete brand identity package including logo design, business cards, letterheads, and comprehensive brand guidelines for tech startup.",
-        image: "/placeholder.svg?height=300&width=400&text=Brand+Identity",
+        image: "/vite.svg",
         tags: ["Illustrator", "Branding", "Print", "Logo Design"],
         stats: { views: "1.8k", likes: "134", comments: "18" },
         color: "from-blue-500 to-cyan-500",
@@ -222,7 +222,7 @@ export default function Portfolio() {
         category: "Digital Marketing",
         description:
           "Creative social media posts, stories, and ad designs for beauty brand's product launch campaign across multiple platforms.",
-        image: "/placeholder.svg?height=300&width=400&text=Social+Media",
+        image: "/vite.svg",
         tags: ["Photoshop", "Social Media", "Marketing", "Campaign"],
         stats: { views: "3.1k", likes: "201", comments: "31" },
         color: "from-purple-500 to-indigo-500",
@@ -236,7 +236,7 @@ export default function Portfolio() {
         category: "Web Design",
         description:
           "Professional website design for consulting firm with focus on user experience, conversion optimization, and modern aesthetics.",
-        image: "/placeholder.svg?height=300&width=400&text=Website+Design",
+        image: "/vite.svg",
         tags: ["Adobe XD", "Web Design", "Corporate", "UX"],
         stats: { views: "1.5k", likes: "98", comments: "12" },
         color: "from-green-500 to-emerald-500",
@@ -250,7 +250,7 @@ export default function Portfolio() {
         category: "Motion Design",
         description:
           "Animated explainer video for SaaS product showcasing features, benefits, and user journey with engaging visual storytelling.",
-        image: "/placeholder.svg?height=300&width=400&text=Motion+Graphics",
+        image: "/vite.svg",
         tags: ["After Effects", "Motion", "Video", "Animation"],
         stats: { views: "4.2k", likes: "287", comments: "45" },
         color: "from-orange-500 to-red-500",
@@ -264,7 +264,7 @@ export default function Portfolio() {
         category: "Print Design",
         description:
           "Editorial design for lifestyle magazine featuring modern typography, visual hierarchy, and engaging layout design for print publication.",
-        image: "/placeholder.svg?height=300&width=400&text=Magazine+Layout",
+        image: "/vite.svg",
         tags: ["InDesign", "Print", "Editorial", "Typography"],
         stats: { views: "1.2k", likes: "89", comments: "15" },
         color: "from-teal-500 to-blue-500",

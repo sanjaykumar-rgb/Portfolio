@@ -15,7 +15,7 @@ export function FlipCard({ frontOpacity, backOpacity }: FlipCardProps) {
         style={{ opacity: frontOpacity }}
       >
         <img
-          src="/placeholder.svg?height=160&width=160" // Placeholder for your photo
+          src="/vite.svg" // Placeholder for your photo
           alt="Sanjay Kumar's Profile Photo"
           className="w-full h-full object-cover rounded-none animate-float-subtle"
         />
@@ -27,7 +27,7 @@ export function FlipCard({ frontOpacity, backOpacity }: FlipCardProps) {
         style={{ rotateY: 180, opacity: backOpacity }}
       >
         <img
-          src="/placeholder.svg?height=160&width=160&text=Graphic+Art" // Placeholder for graphic image
+          src="/vite.svg" // Placeholder for graphic image
           alt="Graphic Art"
           className="w-full h-full object-cover rounded-none animate-float-subtle"
         />

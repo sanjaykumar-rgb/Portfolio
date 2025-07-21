@@ -103,7 +103,7 @@ export function ProjectsSection({
       description:
         "Modern e-commerce solution with advanced features and seamless user experience for online shopping.",
       category: "Web Design",
-      image: "/placeholder.svg?height=300&width=400&text=E-Commerce+Platform",
+      image: "/vite.svg",
       technologies: ["React", "Node.js", "MongoDB", "Stripe"],
       status: "Live",
       featured: true,
@@ -119,7 +119,7 @@ export function ProjectsSection({
       description:
         "Secure and intuitive mobile banking application with biometric authentication and real-time transactions.",
       category: "Mobile App",
-      image: "/placeholder.svg?height=300&width=400&text=Banking+App",
+      image: "/vite.svg",
       technologies: ["React Native", "Firebase", "TypeScript"],
       status: "Live",
       featured: true,
@@ -134,7 +134,7 @@ export function ProjectsSection({
       title: "Brand Identity System",
       description: "Complete brand identity design including logo, guidelines, and comprehensive marketing materials.",
       category: "Branding",
-      image: "/placeholder.svg?height=300&width=400&text=Brand+Identity",
+      image: "/vite.svg",
       technologies: ["Adobe Illustrator", "Figma", "Photoshop"],
       status: "Completed",
       featured: false,
@@ -149,7 +149,7 @@ export function ProjectsSection({
       description:
         "Comprehensive analytics dashboard with real-time data visualization and advanced reporting features.",
       category: "UI/UX",
-      image: "/placeholder.svg?height=300&width=400&text=Analytics+Dashboard",
+      image: "/vite.svg",
       technologies: ["Vue.js", "D3.js", "Python", "PostgreSQL"],
       status: "Live",
       featured: true,
@@ -164,7 +164,7 @@ export function ProjectsSection({
       title: "Social Media Platform",
       description: "Modern social networking platform with real-time messaging and content sharing capabilities.",
       category: "Web Design",
-      image: "/placeholder.svg?height=300&width=400&text=Social+Platform",
+      image: "/vite.svg",
       technologies: ["Next.js", "Socket.io", "Redis", "AWS"],
       status: "Live",
       featured: true,
@@ -179,7 +179,7 @@ export function ProjectsSection({
       title: "Fitness Tracking App",
       description: "Comprehensive fitness tracking application with workout plans and nutrition monitoring.",
       category: "Mobile App",
-      image: "/placeholder.svg?height=300&width=400&text=Fitness+App",
+      image: "/vite.svg",
       technologies: ["Flutter", "Firebase", "HealthKit"],
       status: "Live",
       featured: false,
@@ -553,7 +553,7 @@ function EnhancedProjectCard({ project, viewMode }: { project: any; viewMode: "g
             <div className="relative overflow-hidden lg:w-80 lg:flex-shrink-0">
               <div className="aspect-[4/3] lg:aspect-square">
                 <img
-                  src={project.image || "/placeholder.svg"}
+                  src={project.image || "/vite.svg"}
                   alt={project.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
@@ -719,7 +719,7 @@ function EnhancedProjectCard({ project, viewMode }: { project: any; viewMode: "g
           <div className="relative overflow-hidden flex-shrink-0">
             <div className="h-48 w-full">
               <img
-                src={project.image || "/placeholder.svg"}
+                src={project.image || "/vite.svg"}
                 alt={project.title}
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
               />

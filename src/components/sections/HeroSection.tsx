@@ -368,7 +368,7 @@ export function HeroSection({ personalInfo, stats, containerVariants, itemVarian
                       style={{ opacity: useTransform(rotateY, [0, 90, 180], [1, 0, 0]) }}
                     >
                       <img
-                        src="/placeholder.svg?height=200&width=200&text=Sanjay+Kumar"
+                        src="/vite.svg"
                         alt={personalInfo.name}
                         className="w-full h-full object-cover rounded-full"
                       />

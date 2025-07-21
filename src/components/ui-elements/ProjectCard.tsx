@@ -29,7 +29,7 @@ export function ProjectCard({ project, viewMode = "grid" }: ProjectCardProps) {
             <div className="relative overflow-hidden md:w-80 flex-shrink-0">
               <div className="aspect-[4/3] md:aspect-square bg-gradient-to-br from-gray-100 to-gray-200">
                 <img
-                  src={project.image || "/placeholder.svg?height=300&width=300"}
+                  src={project.image || "/vite.svg"}
                   alt={project.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
@@ -117,7 +117,7 @@ export function ProjectCard({ project, viewMode = "grid" }: ProjectCardProps) {
         <div className="relative overflow-hidden">
           <div className="aspect-[4/3] bg-gradient-to-br from-gray-100 to-gray-200">
             <img
-              src={project.image || "/placeholder.svg?height=300&width=400"}
+              src={project.image || "/vite.svg"}
               alt={project.title}
               className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
             />
