@@ -1,0 +1,45 @@
+# Ignore macOS DS_Store and metadata files
+.DS_Store
+._*
+
+# Ignore all images by default to avoid duplicate images
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.svg
+*.webp
+*.bmp
+*.ico
+*.tiff
+
+# Explicitly allow images in the assets/ directory
+!assets/**/*.jpg
+!assets/**/*.jpeg
+!assets/**/*.png
+!assets/**/*.gif
+!assets/**/*.svg
+!assets/**/*.webp
+!assets/**/*.bmp
+!assets/**/*.ico
+!assets/**/*.tiff
+
+!assets/*.jpg
+!assets/*.jpeg
+!assets/*.png
+!assets/*.gif
+!assets/*.svg
+!assets/*.webp
+!assets/*.bmp
+!assets/*.ico
+!assets/*.tiff
+
+# Ignore design folders just in case
+/ branding/
+/Packing Branding/
+/UI:UX/
+/Web/
+/ads graphic /
+/e-commerce amazon, web site/
+/global banner app/
+/logo/
