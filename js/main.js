@@ -13,6 +13,22 @@ document.addEventListener('DOMContentLoaded', () => {
   const projectCards = document.querySelectorAll('.project-card');
   const reveals = document.querySelectorAll('.reveal');
   const sections = document.querySelectorAll('section[id]');
+  const themeToggle = document.getElementById('themeToggle');
+
+  /* ---------- Theme Management ---------- */
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    document.body.classList.remove('light-theme');
+  } else {
+    // Default is light-theme
+    document.body.classList.add('light-theme');
+  }
+
+  themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('light-theme');
+    const isLight = document.body.classList.contains('light-theme');
+    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+  });
 
   /* ---------- Gallery grid refs ---------- */
   const lightbox = document.getElementById('lightbox');
