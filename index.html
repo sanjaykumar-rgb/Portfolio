@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
-<body>
+<body class="light-theme">
 
   <!-- ==================== NAVIGATION ==================== -->
   <nav class="navbar" id="navbar">
@@ -32,32 +32,50 @@
     </div>
   </nav>
 
-  <!-- ==================== HERO ==================== -->
+  <!-- ==================== HERO + ABOUT (MERGED) ==================== -->
   <section class="hero" id="hero">
+    <span id="about" style="position:absolute;top:0;"></span>
     <div class="hero-bg-pattern"></div>
     <canvas id="heroParticles" class="hero-particles"></canvas>
-    <div class="container">
-      <div class="hero-content">
-        <p class="hero-subtitle">Hello, my name is</p>
+    <div class="container hero-grid">
+      <div class="hero-intro">
+        <p class="hero-subtitle">Hello, I'm</p>
         <h1 class="hero-title">
-          SANJAY<br /><span>KUMAR</span>
+          SANJAY <span>KUMAR</span>
         </h1>
         <div class="hero-tagline">Graphic Designer &amp; UI/UX Designer</div>
-        <p class="hero-desc">
-          Strategic Creative Lead with 9+ years of experience delivering high-impact
-          visual solutions across Print, Digital, and UI/UX. Pioneering AI-augmented
-          design workflows to slash production cycles by 40%.
-        </p>
-        <div class="hero-btns">
-          <a href="#projects" class="btn-primary">View My Work ↓</a>
-          <a href="#contact" class="btn-outline">Contact Me</a>
-        </div>
       </div>
       <div class="hero-image">
         <div class="hero-image-wrapper">
-          <!-- Replace with your own photo -->
           <img src="assets/Whisk_112cccb4cb8d7eabaab45d2dfac27355dr.png" alt="Sanjay Kumar" />
         </div>
+      </div>
+      <div class="hero-details">
+        <div class="hero-tagline">Where Art Meets Interface</div>
+        <p class="hero-desc">
+          9+ years of transforming bold ideas into visual experiences that
+          captivate, convert, and elevate brands. From pixel-perfect UI to
+          print-ready campaigns — currently pioneering AI-augmented workflows
+          at <strong>YesMadam</strong>, cutting production cycles by 40%.
+        </p>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <h4>9+</h4>
+            <p>Years Crafting</p>
+          </div>
+          <div class="stat-item">
+            <h4>50+</h4>
+            <p>Brands Elevated</p>
+          </div>
+          <div class="stat-item">
+            <h4>35%</h4>
+            <p>Efficiency Boost</p>
+          </div>
+        </div>
+      </div>
+      <div class="hero-btns">
+        <a href="#projects" class="btn-primary">View My Work ↓</a>
+        <a href="#contact" class="btn-outline">Contact Me</a>
       </div>
     </div>
     <div class="hero-scroll-indicator">
@@ -66,105 +84,72 @@
     </div>
   </section>
 
-  <!-- ==================== ABOUT ==================== -->
-  <section class="about section" id="about">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-image reveal">
-          <div class="about-image-wrapper">
-            <img src="assets/Whisk_112cccb4cb8d7eabaab45d2dfac27355dr.png" alt="Sanjay Kumar" />
-          </div>
-        </div>
-        <div class="about-text reveal">
-          <p class="about-label">Who am I</p>
-          <h3>HELLO<span>.</span></h3>
-          <p>
-            I'm a Strategic Creative Lead specializing in Graphic Design and UI/UX.
-            With 9+ years of experience, I've delivered high-impact visual solutions
-            across Print, Digital, and UI/UX for top brands.
-          </p>
-          <p>
-            Currently pioneering AI-augmented design workflows at
-            <strong>YesMadam</strong>, I'm expert at translating complex business
-            goals into revenue-generating brand assets and seamless user interfaces.
-          </p>
-          <div class="about-stats">
-            <div class="stat-item">
-              <h4>9+</h4>
-              <p>Years Experience</p>
-            </div>
-            <div class="stat-item">
-              <h4>50+</h4>
-              <p>Projects Done</p>
-            </div>
-            <div class="stat-item">
-              <h4>35%</h4>
-              <p>Faster Delivery</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ==================== SKILLS & TOOLS ==================== -->
   <section class="skills section" id="skills">
     <div class="container">
       <div class="section-header reveal">
-        <h2>MY <span>SKILLS</span></h2>
-        <p>Tools &amp; Technologies</p>
+        <h2>CREATIVE <span>ARSENAL</span></h2>
+        <p>Tools & Technologies I Master</p>
       </div>
       <div class="skills-grid">
         <!-- Skill 1 -->
         <div class="skill-card reveal">
-          <div class="skill-icon">🎨</div>
-          <h3>UI/UX Design</h3>
+          <div class="skill-card-header">
+            <div class="skill-icon">🎨</div>
+            <h3>UI/UX Design</h3>
+          </div>
           <p>Creating intuitive, user-centered interfaces with meticulous attention to wireframing, prototyping, and
             user research.</p>
           <div class="skill-tools">
-            <span>Figma</span>
-            <span>Adobe XD</span>
-            <span>InVision</span>
-            <span>Balsamiq</span>
+            <span><img src="https://api.iconify.design/logos:figma.svg" alt="Figma" />Figma</span>
+            <span><img src="https://api.iconify.design/logos:adobe-xd.svg" alt="Adobe XD" />Adobe XD</span>
+            <span><img src="https://api.iconify.design/simple-icons:invision.svg?color=%23FF3366" alt="InVision" />InVision</span>
+            <span><img src="https://api.iconify.design/simple-icons:balsamiq.svg?color=%23CC0000" alt="Balsamiq" />Balsamiq</span>
           </div>
         </div>
         <!-- Skill 2 -->
         <div class="skill-card reveal">
-          <div class="skill-icon">🖼️</div>
-          <h3>Graphic &amp; Print</h3>
+          <div class="skill-card-header">
+            <div class="skill-icon">🖼️</div>
+            <h3>Graphic &amp; Print</h3>
+          </div>
           <p>End-to-end design for packaging, print ads, brand identity, and high-volume print deliverables with vendor
             coordination.</p>
           <div class="skill-tools">
-            <span>Photoshop</span>
-            <span>Illustrator</span>
-            <span>CorelDraw</span>
-            <span>InDesign</span>
+            <span><img src="https://api.iconify.design/logos:adobe-photoshop.svg" alt="Photoshop" />Photoshop</span>
+            <span><img src="https://api.iconify.design/logos:adobe-illustrator.svg" alt="Illustrator" />Illustrator</span>
+            <span><img src="https://api.iconify.design/simple-icons:coreldraw.svg?color=%2300A14B" alt="CorelDraw" />CorelDraw</span>
+            <span><img src="https://api.iconify.design/logos:adobe-indesign.svg" alt="InDesign" />InDesign</span>
           </div>
         </div>
         <!-- Skill 3 -->
         <div class="skill-card reveal">
-          <div class="skill-icon">🤖</div>
-          <h3>AI Power Tools</h3>
+          <div class="skill-card-header">
+            <div class="skill-icon">🤖</div>
+            <h3>AI Power Tools</h3>
+          </div>
           <p>Leveraging generative AI for rapid asset creation, video production, and UX copywriting to cut production
             cycles.</p>
           <div class="skill-tools">
-            <span>Midjourney</span>
-            <span>Adobe Firefly</span>
-            <span>Runway</span>
-            <span>ChatGPT</span>
+            <span><img src="assets/icons/midjourney.png" alt="Midjourney" />Midjourney</span>
+            <span><img src="https://api.iconify.design/simple-icons:adobe.svg?color=%23FF0000" alt="Adobe Firefly" />Adobe Firefly</span>
+            <span><img src="assets/icons/runway.png" alt="Runway" />Runway</span>
+            <span><img src="https://api.iconify.design/simple-icons:openai.svg?color=%2310A37F" alt="ChatGPT" />ChatGPT</span>
           </div>
         </div>
         <!-- Skill 4 -->
         <div class="skill-card reveal">
-          <div class="skill-icon">🎬</div>
-          <h3>Motion &amp; Video</h3>
+          <div class="skill-card-header">
+            <div class="skill-icon">🎬</div>
+            <h3>Motion &amp; Video</h3>
+          </div>
           <p>Crafting dynamic motion graphics, social media video ads, and AI-driven video generation for
             high-engagement content.</p>
           <div class="skill-tools">
-            <span>After Effects</span>
-            <span>Premiere Pro</span>
-            <span>Luma AI</span>
-            <span>KlingAI</span>
+            <span><img src="https://api.iconify.design/logos:adobe-after-effects.svg" alt="After Effects" />After Effects</span>
+            <span><img src="https://api.iconify.design/logos:adobe-premiere.svg" alt="Premiere Pro" />Premiere Pro</span>
+            <span><img src="assets/icons/lumaai.png" alt="Luma AI" />Luma AI</span>
+            <span><img src="assets/icons/klingai.png" alt="KlingAI" />KlingAI</span>
           </div>
         </div>
       </div>
@@ -175,46 +160,57 @@
   <section class="experience section" id="experience">
     <div class="container">
       <div class="section-header reveal">
-        <h2>WORK <span>EXPERIENCE</span></h2>
-        <p>My Professional Journey</p>
+        <h2>THE <span>JOURNEY</span></h2>
+        <p>A Story Written in Pixels & Print</p>
       </div>
-      <div class="timeline">
-        <!-- 1 -->
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-date">2023 — Present</div>
-          <h3>Senior Graphic Designer</h3>
-          <h4>YesMadam</h4>
-          <p>Leading AI-driven content transition using Midjourney and Firefly. Designing 360° campaigns including
-            outdoor print ads, digital performance marketing, and in-app visuals. Reduced creative turnaround by 35%
-            through automated templates.</p>
-        </div>
-        <!-- 2 -->
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-date">2021 — 2023</div>
-          <h3>Senior UX Designer</h3>
-          <h4>WebApp.World</h4>
-          <p>Directed UI/UX strategy for multiple web platforms, managing up to 6 concurrent projects. Created
-            high-fidelity designs and social media ad sets that improved lead-generation metrics.</p>
-        </div>
-        <!-- 3 -->
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-date">2020 — 2021</div>
-          <h3>Creative UI Designer</h3>
-          <h4>AdBird Media Pvt Ltd</h4>
-          <p>Spearheaded web design projects and digital advertising campaigns focused on user acquisition. Developed
-            cohesive visual languages for digital brands across web and social platforms.</p>
-        </div>
-        <!-- 4 -->
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-date">2017 — 2020</div>
-          <h3>Creative UI Designer</h3>
-          <h4>Horizon9 Advertising &amp; Brand Consultants</h4>
-          <p>Managed end-to-end design for packaging, print ads, and brand identity for premium clients. Partnered with
-            vendors and printers for high-volume deliverables.</p>
+      <div class="journey">
+        <!-- SVG sine wave -->
+        <svg class="journey-wave" viewBox="0 0 1200 200" preserveAspectRatio="none" fill="none">
+          <defs>
+            <linearGradient id="waveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#f5c518"/>
+              <stop offset="100%" stop-color="#8b5cf6"/>
+            </linearGradient>
+          </defs>
+          <path d="M0,100 C150,0 150,0 300,100 C450,200 450,200 600,100 C750,0 750,0 900,100 C1050,200 1050,200 1200,100"
+                stroke="url(#waveGrad)" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+          <!-- Dots on wave peaks/troughs -->
+          <circle cx="150" cy="50" r="8" fill="#f5c518" class="journey-dot-svg"/>
+          <circle cx="450" cy="150" r="8" fill="#f5c518" class="journey-dot-svg"/>
+          <circle cx="750" cy="50" r="8" fill="#f5c518" class="journey-dot-svg"/>
+          <circle cx="1050" cy="150" r="8" fill="#8b5cf6" class="journey-dot-svg"/>
+        </svg>
+
+        <!-- Cards grid -->
+        <div class="journey-cards">
+          <!-- 1 — top (peak) -->
+          <div class="journey-card journey-top reveal">
+            <div class="journey-date">2023 — Present</div>
+            <h3>Senior Graphic Designer</h3>
+            <h4>YesMadam</h4>
+            <p>Leading AI-driven content transition using Midjourney and Firefly. Designing 360° campaigns. Reduced creative turnaround by 35%.</p>
+          </div>
+          <!-- 2 — bottom (trough) -->
+          <div class="journey-card journey-bottom reveal">
+            <div class="journey-date">2021 — 2023</div>
+            <h3>Senior UX Designer</h3>
+            <h4>WebApp.World</h4>
+            <p>Directed UI/UX strategy for multiple web platforms, managing up to 6 concurrent projects.</p>
+          </div>
+          <!-- 3 — top (peak) -->
+          <div class="journey-card journey-top reveal">
+            <div class="journey-date">2020 — 2021</div>
+            <h3>Creative UI Designer</h3>
+            <h4>AdBird Media Pvt Ltd</h4>
+            <p>Spearheaded web design projects and digital advertising campaigns for user acquisition.</p>
+          </div>
+          <!-- 4 — bottom (trough) -->
+          <div class="journey-card journey-bottom reveal">
+            <div class="journey-date">2017 — 2020</div>
+            <h3>Creative UI Designer</h3>
+            <h4>Horizon9 Advertising</h4>
+            <p>Managed end-to-end design for packaging, print ads, and brand identity for premium clients.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -224,8 +220,8 @@
   <section class="projects section" id="projects">
     <div class="container">
       <div class="section-header reveal">
-        <h2>MY <span>WORK</span></h2>
-        <p>Awesome Projects</p>
+        <h2>SELECTED <span>WORKS</span></h2>
+        <p>Crafted with Purpose & Passion</p>
       </div>
       <div class="filter-btns reveal">
         <button class="filter-btn active" data-filter="all">All</button>
@@ -304,8 +300,8 @@
   <section class="education section" id="education">
     <div class="container">
       <div class="section-header reveal">
-        <h2>MY <span>EDUCATION</span></h2>
-        <p>Academic Background</p>
+        <h2>LEARNING <span>PATH</span></h2>
+        <p>The Foundation Behind the Craft</p>
       </div>
       <div class="edu-grid">
         <div class="edu-card reveal">
@@ -326,12 +322,12 @@
   <section class="contact section" id="contact">
     <div class="container">
       <div class="section-header reveal">
-        <h2>GET IN <span>TOUCH</span></h2>
-        <p>Let's Work Together</p>
+        <h2>LET'S <span>CREATE</span></h2>
+        <p>Together, We Can Build Something Beautiful</p>
       </div>
       <div class="contact-grid">
         <div class="contact-info reveal">
-          <h3>Let's talk about your project</h3>
+          <h3>Got a Vision? Let's Bring It to Life.</h3>
           <p>
             I'm always open to discussing new projects, creative ideas, or
             opportunities to be part of your vision. Feel free to reach out!
