@@ -1,12 +1,12 @@
 const projectsData = {
   "branding": [
-    "1.png", "2.png", "0251b958-3fcc-427f-a864-1b7e5a5842c4.png", "55785031-706c-4c59-b9bc-b2d557f3e1e2.png",
+    "0251b958-3fcc-427f-a864-1b7e5a5842c4.png", "55785031-706c-4c59-b9bc-b2d557f3e1e2.png",
     "b08e8653-cde9-44d3-b540-6312670ecd91.jpg", "b6d28a99-0446-41d7-9386-949db5f97658.png", "cb464c31-f672-4e97-8ccc-31b8dc8412c8.png",
     "f310260a-6f11-4bfe-9b31-577857bd87ac.png", "f521e6a9-34c3-49a1-929b-c43c91a22125.png", "fdf14b30-731d-49a6-890c-0153dcf5eca2.png",
     "ffdf0d61-aa56-4754-92f6-8bf9576aa24b.png"
   ],
   "social-media": [
-    "1.png", "2.png", "Ai Hiring Ad 1080x1080.mp4", "App Banner BWB1.webp", "BWB  18_1004.jpg", "BWB (1)_1004.jpg", "BWB (1)_1080.jpg",
+    "Ai Hiring Ad 1080x1080.mp4", "App Banner BWB1.webp", "BWB  18_1004.jpg", "BWB (1)_1004.jpg", "BWB (1)_1080.jpg",
     "BWB (2)_1004.jpg", "BWB (2)_1080.jpg", "BWB (3).jpg", "BWB (3)_1004.jpg", "BWB 1080x1350.jpg", "BWB 12_1080 x 1080.jpg",
     "BWB 13_1080 x 1080.jpg", "BWB 15_1080 X 1080.jpg", "BWB 16_1 (1).jpg", "BWB 16_1.jpg", "BWB 17.jpg", "BWB 17_1004psd.jpg",
     "BWB 19.jpg", "BWB 20_1004.jpg", "BWB 21.jpg", "BWB 21_1004.jpg", "BWB 23_1004.png", "BWB 24_1004.jpg", "BWB.jpg", "BWB_1004.jpg",
@@ -42,7 +42,7 @@ const projectsData = {
     "spa_split screen _1004.jpg", "winter genric.jpg"
   ],
   "packaging": [
-    "1.png", "2.png", "05ac5d51-03b6-49a5-8002-d85765735945.jpg", "DSC07696.jpg", "KOREAN---NOSE-STRIP-POUCH.jpg", "KOREAN-EYE-MASK.jpg",
+    "05ac5d51-03b6-49a5-8002-d85765735945.jpg", "DSC07696.jpg", "KOREAN---NOSE-STRIP-POUCH.jpg", "KOREAN-EYE-MASK.jpg",
     "SHAMPOO-&-CONDITIONER.jpg", "SOKORA - KOREAN BODY SCRUB-50g.jpg", "SOKORA - KOREAN CLEANSING MILK.jpg", "SOKORA---KOREAN-SUNSCREEN-50g (1).jpg",
     "SOKORA---KOREAN-SUNSCREEN-50g.jpg", "SOKORA-KOREAN-MASSAGE-CREAM.jpg", "SOKORA-KOREAN-MOISTURISER.jpg", "SUNSCREEN-FRONT.jpg",
     "ce293cda-8829-49c4-8e21-6f166ed2cc8a.jpg", "Korean Clean up Mockups/1 pure rice radiance cleanser.png",
