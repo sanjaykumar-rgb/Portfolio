@@ -25,6 +25,10 @@
   --accent:       #8b5cf6;
   --accent-soft:  rgba(139,92,246,0.12);
   --navbar-bg:    rgba(6,6,8,0.85);
+  --sidebar-bg:   rgba(6,6,8,0.98);
+  --overlay-bg:   rgba(6,6,8,0.94);
+  --overlay-heavy:rgba(6,6,8,0.97);
+  --btn-text:     #0b0b0f;
 
   /* Typography */
   --font-heading: 'Syne', sans-serif;
@@ -35,30 +39,56 @@
   /* Effects */
   --transition:     0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   --transition-fast:0.2s ease;
-  --shadow:         0 8px 32px rgba(0,0,0,.08);
-  --shadow-glow:    0 0 40px rgba(245,197,24,0.05);
+  --shadow:         0 8px 32px rgba(0,0,0,.25);
+  --shadow-glow:    0 0 40px rgba(245,197,24,0.08);
   --radius:         12px;
   --radius-lg:      20px;
-  --glass:          rgba(255,255,255,0.7);
-  --glass-border:   rgba(0,0,0,0.06);
-  --noise:          url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.02'/%3E%3C/svg%3E");
+  --glass:          rgba(18,18,26,0.65);
+  --glass-border:   rgba(255,255,255,0.06);
+  --noise:          url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
 }
 
 /* Premium White Theme override */
 body.light-theme {
   --black:        #ffffff;
-  --black-deep:   #fcfcfd;
+  --black-deep:   #f8f9fb;
   --black-card:   #ffffff;
-  --black-card-2: #f8f9fa;
+  --black-card-2: #f3f4f6;
   --white:        #151518;
   --white-pure:   #151518;
   --gray:         #5a5a6a;
-  --gray-light:   #757585;
-  --gray-dark:    #eef0f2;
+  --gray-light:   #6b6b7a;
+  --gray-dark:    #e8eaed;
   --glass:        rgba(255,255,255,0.85);
   --glass-border: rgba(0,0,0,0.08);
-  --shadow:       0 10px 40px rgba(0,0,0,0.05);
-  --navbar-bg:    rgba(255,255,255,0.85);
+  --shadow:       0 4px 24px rgba(0,0,0,0.06);
+  --shadow-glow:  0 0 30px rgba(245,197,24,0.06);
+  --navbar-bg:    rgba(255,255,255,0.88);
+  --sidebar-bg:   rgba(255,255,255,0.98);
+  --overlay-bg:   rgba(255,255,255,0.94);
+  --overlay-heavy:rgba(255,255,255,0.97);
+  --btn-text:     #151518;
+  --yellow-soft:  rgba(245,197,24,0.10);
+  --accent-soft:  rgba(139,92,246,0.08);
+}
+
+/* Light theme — card shadows so white cards are visible on white bg */
+body.light-theme .skill-card,
+body.light-theme .journey-card,
+body.light-theme .edu-card,
+body.light-theme .stat-item,
+body.light-theme .project-card {
+  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+body.light-theme .gallery-filter-btn {
+  background: rgba(0,0,0,0.04);
+  border-color: rgba(0,0,0,0.08);
+}
+
+body.light-theme .lightbox-grid-item {
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
 }
 
 /* ---------- Reset ---------- */
@@ -93,7 +123,7 @@ body::after {
 /* ---------- Selection ---------- */
 ::selection {
   background: var(--yellow);
-  color: var(--black);
+  color: var(--btn-text);
 }
 
 /* ---------- Scrollbar ---------- */
@@ -468,7 +498,7 @@ body.light-theme .theme-toggle .moon { display: none; }
 .hero-tagline {
   display: inline-block;
   background: linear-gradient(135deg, var(--yellow) 0%, var(--yellow-hover) 100%);
-  color: var(--black);
+  color: var(--btn-text);
   font-family: var(--font-display);
   font-weight: 700;
   font-style: italic;
@@ -513,7 +543,7 @@ body.light-theme .theme-toggle .moon { display: none; }
   align-items: center;
   gap: 8px;
   background: linear-gradient(135deg, var(--yellow) 0%, var(--yellow-hover) 100%);
-  color: var(--black);
+  color: var(--btn-text);
   font-family: var(--font-heading);
   font-weight: 700;
   font-size: 0.85rem;
@@ -619,7 +649,7 @@ body.light-theme .theme-toggle .moon { display: none; }
   bottom: 24px;
   right: -12px;
   background: linear-gradient(135deg, var(--yellow), var(--yellow-hover));
-  color: var(--black);
+  color: var(--btn-text);
   font-family: var(--font-heading);
   font-weight: 800;
   font-size: 0.75rem;
@@ -1009,7 +1039,7 @@ body.light-theme .theme-toggle .moon { display: none; }
 .filter-btn.active {
   background: linear-gradient(135deg, var(--yellow), var(--yellow-hover));
   border-color: var(--yellow);
-  color: var(--black);
+  color: var(--btn-text);
   box-shadow: 0 4px 20px var(--yellow-glow);
 }
 
@@ -1105,7 +1135,7 @@ body.light-theme .theme-toggle .moon { display: none; }
   font-family: var(--font-heading);
   font-size: 1rem;
   font-weight: 700;
-  color: var(--black);
+  color: var(--btn-text);
   text-transform: uppercase;
   letter-spacing: 1.5px;
 }
@@ -1386,7 +1416,7 @@ body.light-theme .theme-toggle .moon { display: none; }
   position: fixed;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(6,6,8,0.94);
+  background: var(--overlay-bg);
   backdrop-filter: blur(16px);
 }
 
@@ -1410,7 +1440,7 @@ body.light-theme .theme-toggle .moon { display: none; }
 
 .lightbox-close:hover {
   background: var(--yellow);
-  color: var(--black);
+  color: var(--btn-text);
   border-color: var(--yellow);
   transform: rotate(90deg);
 }
@@ -1446,7 +1476,7 @@ body.light-theme .theme-toggle .moon { display: none; }
   position: sticky;
   top: 0;
   z-index: 10;
-  background: rgba(10,10,10,0.92);
+  background: var(--overlay-bg);
   backdrop-filter: blur(12px);
 }
 
@@ -1541,7 +1571,7 @@ body.light-theme .theme-toggle .moon { display: none; }
   top: 0; left: 0;
   width: 100%; height: 100%;
   z-index: 10002;
-  background: rgba(6,6,8,0.97);
+  background: var(--overlay-heavy);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1674,7 +1704,7 @@ body.light-theme .theme-toggle .moon { display: none; }
     top: 0; right: -100%;
     width: min(280px, 85vw);
     height: 100vh;
-    background: rgba(6,6,8,0.98);
+    background: var(--sidebar-bg);
     backdrop-filter: blur(20px);
     flex-direction: column;
     padding: 100px 40px 40px;
