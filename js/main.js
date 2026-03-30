@@ -71,115 +71,30 @@ document.addEventListener('DOMContentLoaded', () => {
     const isMainUiux = card.getAttribute('data-category') === 'uiux' && !card.getAttribute('data-subproject');
 
     if (isMainUiux) {
-      // ---- MEGA GALLERY: UI/UX Projects Map ----
-      const uiuxData = [
-        {
-          subName: 'women-salon',
-          subTitle: 'Women Salon',
-          folder: 'uiux-app/WOMEN SALON BOOKING UI DESIGN',
-          imgs: '2.png,3.png,4.png,5.png,6.png,7.png,8.png,9.png,10.png,11.png,12.png,13.png,14.png,16.png,17.png,18.png,19.png,20.png,21.png,22.png,23.png,24.png,25.png,26.png,27.png,28.png,29.png,30.png,31.png,32.png,33.png,34.png,35.png,36.png,37.png,38.png,39.png,40.png,41.png,42.png,43.png,44.png,45.png,46.png,47.png'
-        },
-        {
-          subName: 'women-salon',
-          subTitle: 'Women Salon',
-          folder: 'uiux-app/Women Salon New User UI ',
-          imgs: '1.png,2.png,3.png,4.png,5.png,6.png,7.png,8.png,9.png,10.png,11.png,12.png,13.png,14.png,15.png,16.png,17.png,18.png,19.png,20.png,21.png,22.png,23.png,24.png,25.png,26.png,27.png,28.png,29.png,30.png,31.png,32.png,33.png,34.png,35.png,36.png,37.png'
-        },
-        {
-          subName: 'men-salon',
-          subTitle: 'Men Salon',
-          folder: 'uiux-app/men salon ui design ',
-          imgs: '3.png,4.png,5.png,6.png,7.png,9.png,10.png,11.png,12.png,13.png,14.png,15.png,16.png,17.png,18.png,19.png,20.png,21.png,22.png,23.png,24.png,25.png,26.png,27.png,28.png,30.png,31.png,32.png,34.png,logo salon men.png'
-        },
-        {
-          subName: 'men-salon',
-          subTitle: 'Men Salon',
-          folder: 'uiux-app/men salon user ui design',
-          imgs: '1.png,2.png,3.png,4.png,5.png,6.png,7.png,8.png,9.png,10.png,11.png,12.png,13.png,14.png,15.png,16.png,17.png,18.png,19.png,20.png,21.png,22.png,23.png,24.png,25.png,26.png,27.png,28.png,29.png,30.png,31.png,32.png,33.png,34.png,35.png,36.png,37.png,38.png,39.png,40.png,41.png,42.png,43.png,44.png,45.png,46.png,47.png,48.png,49.png,50.png,51.png,52.png,53.png,54.png,55.png,56.png,57.png,58.png,59.png,60.png,61.png,62.png,63.png,64.png,65.png,66.png,67.png,68.png,69.png'
-        },
-        {
-          subName: 'taxi-app',
-          subTitle: 'Taxi App',
-          folder: 'uiux-app/Taxi Driver App UI Design with logo',
-          imgs: '2.png,3.png,4.png,5.png,6.png,7.png,8.png,9.png,10.png,11.png,12.png,13.png,14.png,15.png,16.png,17.png,18.png,19.png,20.png,22.png,23.png,24.png,25.png,26.png,27.png,28.png,30.png,31.png,32.png,33.png,34.png,35.png,36.png,37.png,38.png,39.png,40.png,41.png,42.png,43.png,44.png,45.png,46.png,forget passw.png,login page.png,taxi driver partner app  logo.png'
-        },
-        {
-          subName: 'taxi-app',
-          subTitle: 'Taxi App',
-          folder: 'uiux-app/User Taxi Driver App UI Designer',
-          imgs: '1.png,2.png,3.png,4.png,5.png,6.png,7.png,8.png,9.png,10.png,11.png,12.png,13.png,14.png,15.png,16.png,17.png,18.png,19.png,20.png,21.png,22.png,23.png,24.png,25.png,26.png,27.png,28.png,29.png,30.png,31.png,32.png,33.png,34.png,35.png,36.png,37.png,38.png,39.png,40.png,41.png,42.png,43.png,44.png,45.png'
-        },
-        {
-          subName: 'food-sushi',
-          subTitle: 'Food App',
-          folder: 'uiux-app/Food User sushi ya UI Design',
-          imgs: '1.png,2.png,3.png,4.png,5.png,6.png,7.png,8.png,9.png,10.png,11.png,12.png,13.png,14.png,15.png,16.png,17.png,18.png,19.png,20.png,21.png,22.png,23.png,24.png,25.png,26.png,27.png,28.png,29.png,30.png,31.png,32.png,33.png,34.png,35.png,36.png,37.png,38.png,39.png,40.png,41.png,42.png,43.png,44.png,45.png,46.png,47.png,48.png,49.png,50.png,51.png,52.png,53.png,54.png,55.png,56.png,57.png,58.png,59.png,60.png,61.png,62.png,63.png,64.png,65.png,66.png,67.png,68.png,69.png'
-        },
-        {
-          subName: 'book-for-ride',
-          subTitle: 'Book For Ride',
-          folder: 'uiux-app/Book For Ride  Service Provider UI Design',
-          imgs: '1.png,2.png,3.png,4.png,5.png,6.png,7.png,8.png,9.png,10.png,11.png,12.png,13.png,14.png,15.png,16.png,17.png,18.png,19.png,20.png,21.png,22.png,23.png,24.png,25.png,26.png,logo.png'
-        },
-        {
-          subName: 'web-ui',
-          subTitle: 'Web UI',
-          folder: 'uiux-app/ web ui design',
-          imgs: '0909ba4c-c019-4b60-8b7b-cb0fb2328e56.png,211aec4a-4136-404b-a6b2-8a595564b775.png,2bd86f15-b5a2-4231-b0ff-dd90b847bacd.png,383b15b8-819b-4185-8e36-9bf2a7e73e02.png,4ec10e21-de90-497a-8585-08587bc63b33.jpg,669093f4-36e3-4a4d-a5e4-a783af8eba23.png,c152b42c-5f5d-4fe9-855f-ed1cf58b1d0e.png,fcb0bc26-0e3a-4433-bf3b-e6569bba89ab.jpg'
-        },
-        {
-          subName: 'e-commerce',
-          subTitle: 'E-Commerce Redesign',
-          folder: 'webdesign',
-          imgs: '1.png,2.png'
-        },
-        {
-          subName: 'dashboard',
-          subTitle: 'Analytics Dashboard',
-          folder: 'dashboard',
-          imgs: '1.png,2.png'
-        }
+      // ---- Simple flat gallery for UI/UX projects ----
+      const uiuxImages = [
+        'book your ride copy.webp',
+        'Groom Room Men Salon copy.webp',
+        'HURL TAXI APP UI DESIGN copy.webp',
+        'susha ya food  copy.webp'
       ];
 
-      // Build filter bar (deduplicate merged sub-projects)
-      const allBtn = document.createElement('button');
-      allBtn.className = 'gallery-filter-btn active';
-      allBtn.textContent = 'All';
-      allBtn.addEventListener('click', (e) => filterGallery('all', e.currentTarget));
-      galleryFilter.appendChild(allBtn);
+      uiuxImages.forEach((name, i) => {
+        const src = `assets/images/projects/uiux-app/${encodeURIComponent(name)}`;
+        const item = document.createElement('div');
+        item.className = 'lightbox-grid-item';
 
-      const addedSubs = new Set();
-      uiuxData.forEach(sp => {
-        if (addedSubs.has(sp.subName)) return;
-        addedSubs.add(sp.subName);
-        const btn = document.createElement('button');
-        btn.className = 'gallery-filter-btn';
-        btn.textContent = sp.subTitle;
-        btn.addEventListener('click', (e) => filterGallery(sp.subName, e.currentTarget));
-        galleryFilter.appendChild(btn);
-      });
-
-      // Build grid with ALL images tagged by sub-project
-      uiuxData.forEach(sp => {
-        const imageList = sp.imgs.split(',').map(s => s.trim());
-        imageList.forEach((name, i) => {
-          const src = `assets/images/projects/${sp.folder}/${name.split('/').map(encodeURIComponent).join('/')}`;
-          const item = document.createElement('div');
-          item.className = 'lightbox-grid-item';
-          item.setAttribute('data-sub', sp.subName);
-
-          if (isVideo(name)) {
-            item.innerHTML = `<video src="${src}" muted autoplay loop playsinline preload="metadata"></video>`;
-            item.querySelector('video').addEventListener('click', (e) => {
-              e.stopPropagation();
-              openFullview(src, true);
-            });
-          } else {
-            item.innerHTML = `<img src="${src}" alt="${sp.subTitle} — ${i + 1}" loading="lazy" />`;
-            item.addEventListener('click', () => openFullview(src, false));
-          }
-          lightboxGrid.appendChild(item);
-        });
+        if (isVideo(name)) {
+          item.innerHTML = `<video src="${src}" muted autoplay loop playsinline preload="metadata"></video>`;
+          item.querySelector('video').addEventListener('click', (e) => {
+            e.stopPropagation();
+            openFullview(src, true);
+          });
+        } else {
+          item.innerHTML = `<img src="${src}" alt="UI/UX Design — ${i + 1}" loading="lazy" />`;
+          item.addEventListener('click', () => openFullview(src, false));
+        }
+        lightboxGrid.appendChild(item);
       });
 
     } else {
