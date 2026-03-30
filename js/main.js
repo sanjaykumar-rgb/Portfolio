@@ -99,7 +99,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     } else {
       // ---- NORMAL GALLERY: single project ----
-      const imgNames = card.getAttribute('data-images').split(',').map(s => s.trim());
+      let imgNames = [];
+      if (typeof projectsData !== 'undefined' && projectsData[folder]) {
+        imgNames = projectsData[folder];
+      } else if (card.hasAttribute('data-images')) {
+        imgNames = card.getAttribute('data-images').split(',').map(s => s.trim());
+      }
+
       imgNames.forEach((name, i) => {
         const src = `assets/images/projects/${folder}/${name.split('/').map(encodeURIComponent).join('/')}`;
         const item = document.createElement('div');
